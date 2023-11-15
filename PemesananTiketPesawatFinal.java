@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PemesananTiketPesawat {
+public class PemesananTiketPesawatFinal {
     //kelas abstract tiket pesawat
     abstract class TiketPesawat {
     private String maskapai;
