@@ -59,7 +59,7 @@ public class PemesananTiketPesawat {
             double totalHarga = tiket.hitungTotalHarga();
             System.out.println("\nTotal harga tiket: " + totalHarga);
         } else if (pilihan == 2) {
-            fasilitas = new Fasilitas("Wisata", 50.0); // Contoh fasilitas wisata dengan biaya tambahan
+            fasilitas = new Fasilitas("Wisata", 50000); // Contoh fasilitas wisata dengan biaya tambahan
             TiketPesawat tiket = new TiketPesawatNonPP(maskapai, tujuan, harga, jumlahTiket, fasilitas);
             double totalHarga = tiket.hitungTotalHarga();
             System.out.println("Total harga tiket: " + totalHarga);
