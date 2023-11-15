@@ -3,10 +3,12 @@ import java.util.Scanner;
 public class PemesananTiketPesawat {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Selamat datang di Program Pemesanan Tiket Pesawat");
-        System.out.print("Masukkan maskapai: ");
+        System.out.println("\n-----------------------------------------------------");
+        System.out.println("| Selamat datang di Program Pemesanan Tiket Pesawat |");
+        System.out.println("-----------------------------------------------------");
+        System.out.print("Masukkan Maskapai: ");
         String maskapai = scanner.nextLine();
-        System.out.print("Masukkan tujuan: 1 Bali, 2 Karimunjawa, 3 Medan, 4 Yogyakarta, 5 Jakarta : ");
+        System.out.print("\nDaftar Tujuan:\n1. Bali\n2. Karimunjawa\n3. Medan\n4. Yogyakarta\n5. Jakarta \nMasukkan Tujuan Anda: ");
         int destinasi = scanner.nextInt();
         String tujuan;
         switch (destinasi) {
@@ -30,18 +32,18 @@ public class PemesananTiketPesawat {
                 return;
         }
 
-        System.out.print("Masukkan harga tiket: ");
+        System.out.print("\nMasukkan harga tiket: ");
         double harga = scanner.nextDouble();
         System.out.print("Masukkan jumlah tiket: ");
         int jumlahTiket = scanner.nextInt();
 
         Fasilitas fasilitas;
 
-        System.out.print("Pilih jenis tiket (1 untuk PP, 2 untuk Non-PP): ");
+        System.out.print("\nPilih jenis tiket \n1. Pulang Pergi (PP) \n2. Non-PP \nMasukkan Pilihan: ");
         int pilihan = scanner.nextInt();
 
         if (pilihan == 1) {
-            System.out.print("Pilih fasilitas (1 untuk Hotel Bintang 3, 2 untuk Hotel Bintang 5): ");
+            System.out.print("\nPilih fasilitas: \n\t1. untuk Hotel Bintang 3 \n\t2. untuk Hotel Bintang 5 \nMasukkan Pilihan: ");
             int pilihanFasilitas = scanner.nextInt();
             if (pilihanFasilitas == 1) {
                 fasilitas = new HotelBintang3();
@@ -55,7 +57,7 @@ public class PemesananTiketPesawat {
             System.out.println("Fasilitas: " + fasilitas.getJenis());
             System.out.println("Biaya Fasilitas: " + fasilitas.getBiaya());
             double totalHarga = tiket.hitungTotalHarga();
-            System.out.println("Total harga tiket: " + totalHarga);
+            System.out.println("\nTotal harga tiket: " + totalHarga);
         } else if (pilihan == 2) {
             fasilitas = new Fasilitas("Wisata", 50.0); // Contoh fasilitas wisata dengan biaya tambahan
             TiketPesawat tiket = new TiketPesawatNonPP(maskapai, tujuan, harga, jumlahTiket, fasilitas);
