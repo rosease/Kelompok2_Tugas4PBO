@@ -101,6 +101,11 @@ class HotelBintang5 extends Fasilitas {
         super("Hotel Bintang 5", 500.0); // Biaya tambahan untuk Hotel Bintang 5
     }
 }
+    class HotelBintang3 extends Fasilitas {
+    public HotelBintang3() {
+        super("Hotel Bintang 3", 350.0); // Biaya tambahan untuk Hotel Bintang 3
+    }
+}
     
     
     
