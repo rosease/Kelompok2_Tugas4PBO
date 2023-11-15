@@ -39,6 +39,22 @@ public class PemesananTiketPesawat {
     }
 
 }
+    class TiketPesawatPP extends TiketPesawat {
+    private int jumlahTiket;
+    private Fasilitas fasilitas;
+
+    public TiketPesawatPP(String maskapai, String tujuan, double harga, int jumlahTiket, Fasilitas fasilitas) {
+        super(maskapai, tujuan, harga);
+        this.jumlahTiket = jumlahTiket;
+        this.fasilitas = fasilitas;
+    }
+
+    @Override
+    public double hitungTotalHarga() {
+        return (getHarga() * jumlahTiket * 2) + fasilitas.getBiaya();
+    }
+}
+    
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
